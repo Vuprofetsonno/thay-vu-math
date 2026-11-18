@@ -1,0 +1,16 @@
+/* Minimal Canvas 2D recorder for vector print/export. */
+class SVGRecorder{
+ constructor(w,h){this.width=w;this.height=h;this.items=[];this.stack=[];this.state={fillStyle:'#000',strokeStyle:'#000',lineWidth:1,globalAlpha:1,font:'16px Arial',textBaseline:'alphabetic',textAlign:'start',lineCap:'butt',lineJoin:'miter',dash:[],matrix:[1,0,0,1,0,0]};for(const k of Object.keys(this.state))if(!['dash','matrix'].includes(k))Object.defineProperty(this,k,{get:()=>this.state[k],set:v=>this.state[k]=v});this.beginPath()}
+ save(){this.stack.push(JSON.parse(JSON.stringify(this.state)))}restore(){this.state=this.stack.pop()||this.state}setLineDash(a){this.state.dash=a}getLineDash(){return this.state.dash}
+ translate(x,y){const m=this.state.matrix;m[4]+=m[0]*x+m[2]*y;m[5]+=m[1]*x+m[3]*y}scale(x,y){const m=this.state.matrix;m[0]*=x;m[1]*=x;m[2]*=y;m[3]*=y}
+ beginPath(){this.path=[]}moveTo(x,y){this.path.push(`M${x} ${y}`)}lineTo(x,y){this.path.push(`L${x} ${y}`)}quadraticCurveTo(cx,cy,x,y){this.path.push(`Q${cx} ${cy} ${x} ${y}`)}closePath(){this.path.push('Z')}
+ ellipse(x,y,rx,ry,rot,start,end,ccw=false){if(end-start>=Math.PI*2)end=start+Math.PI*2;const n=Math.max(8,Math.ceil(Math.abs(end-start)*24));for(let i=0;i<=n;i++){const a=start+(end-start)*i/n,X=x+rx*Math.cos(a)*Math.cos(rot)-ry*Math.sin(a)*Math.sin(rot),Y=y+rx*Math.cos(a)*Math.sin(rot)+ry*Math.sin(a)*Math.cos(rot);if(i===0)this.moveTo(X,Y);else this.lineTo(X,Y)}}
+ arc(x,y,r,s,e,ccw=false){this.ellipse(x,y,r,r,0,s,e,ccw)}
+ esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]))}
+ style(fill=false){return `transform="matrix(${this.state.matrix.join(' ')})" opacity="${this.globalAlpha}" fill="${fill?this.esc(this.fillStyle):'none'}" stroke="${fill?'none':this.esc(this.strokeStyle)}" stroke-width="${this.lineWidth}" stroke-linecap="${this.lineCap}" stroke-linejoin="${this.lineJoin}" ${this.state.dash.length?`stroke-dasharray="${this.state.dash.join(' ')}"`:''}`}
+ stroke(){this.items.push(`<path d="${this.path.join(' ')}" ${this.style()}/>`)}fill(){this.items.push(`<path d="${this.path.join(' ')}" ${this.style(true)}/>`)}
+ fillRect(x,y,w,h){this.items.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" ${this.style(true)}/>`)}strokeRect(x,y,w,h){this.items.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" ${this.style()}/>`)}
+ fillText(t,x,y){const baseline=this.textBaseline==='top'?'hanging':this.textBaseline==='middle'?'central':'alphabetic';this.items.push(`<text x="${x}" y="${y}" ${this.style(true)} style="font:${this.esc(this.font)}" dominant-baseline="${baseline}" text-anchor="${this.textAlign==='center'?'middle':this.textAlign==='right'?'end':'start'}">${this.esc(t)}</text>`)}
+ drawImage(im,x,y,w,h){if(im._svg){this.items.push(`<g transform="matrix(${this.state.matrix.join(' ')})"><svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${this.esc(im._viewBox)}">${im._svg}</svg></g>`)}else this.items.push(`<image x="${x}" y="${y}" width="${w}" height="${h}" href="${this.esc(im.src)}" transform="matrix(${this.state.matrix.join(' ')})"/>`)}
+ svg(){return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${this.width}" height="${this.height}" viewBox="0 0 ${this.width} ${this.height}">${this.items.join('')}</svg>`}
+}

@@ -1,0 +1,122 @@
+THẦY VŨ MATH k66 — Studio 6
+
+MỚI TRONG STUDIO 6
+- Các trang nối tiếp theo chiều dọc, giữ nguyên mức phóng to khi cuộn qua trang.
+  Bấm/viết ngay lên trang bên dưới để làm việc; không bị nhảy về đầu trang.
+  Chỉ trang đang viết dùng bề mặt nét độ phân giải cao; trang gần được vẽ sẵn,
+  trang xa giải phóng bộ nhớ ảnh. Sổ nhiều trang vẫn cần thời gian tải ban đầu.
+- Dấu ngắm theo đúng đầu nét cả khi kéo đoạn thẳng/nét đứt, bắt điểm hoặc giữ Shift.
+  Có con trỏ bút dự phòng; chỉnh cỡ dấu ngắm trong Giấy & khoảng cách.
+- Mặc định: chuột và bút viết, ngón tay cuộn. Bỏ chọn chế độ này nếu muốn viết
+  bằng ngón tay. Tốc độ và lực nhấn thực tế còn phụ thuộc thiết bị.
+- Nét đứt có nút riêng; Đường mở đoạn, vectơ, tia, đường thẳng và ký hiệu.
+- Giấy dọc/ngang, khoảng dòng 16–80, màu giấy/đường kẻ; thanh công cụ gọn.
+  Chèn khoảng trống: chọn vị trí không cắt ngang đối tượng rồi đẩy phần dưới
+  xuống, tăng chiều cao trang. Không áp dụng cho nền PDF. Có hoàn tác.
+- Chọn nhóm bằng khung hoặc khoanh tự do; kéo, sao chép, xóa cả nhóm.
+  Cắt ảnh theo hình chữ nhật. Chưa cắt ảnh theo vùng tự do.
+- Thêm hình khối, đáy hình thang/bình hành, chóp có SA vuông góc đáy, lăng trụ
+  xiên, chóp cụt, bát diện, nêm. Cạnh khuất nét đứt, chỉnh tên/cỡ điểm.
+- Dựng theo tọa độ: trung điểm, chia đoạn, song song, vuông góc, chân đường cao,
+  phân giác, giao điểm, tròn qua 3 điểm, các tâm tam giác và tiếp tuyến.
+  Biến hình đối tượng nét/hình: tịnh tiến, quay, đối xứng, vị tự.
+- Đồ thị nhiều hàm: tối đa 6 hàm, phân số tử–mẫu, điểm và tô diện tích dưới hàm đầu.
+- Thống kê thô/ghép nhóm, biểu đồ hộp, histogram đúng độ rộng lớp; tổ hợp,
+  Pascal, Newton, nhị thức, sơ đồ cây, xác suất toàn phần và Bayes.
+- Chèn đoạn đề có công thức LaTeX và các lệnh ex_test: choice, choiceTF,
+  shortans, loigiai; bật/tắt đáp án. Chưa biên dịch đầy đủ TeX/TikZ/Typst.
+
+NÉT VIẾT & CÔNG THỨC
+- Con trỏ có tâm và viền sáng–tối; vòng đầu bút rõ trên giấy và nền tài liệu.
+- Bút & con trỏ: nét đều (mặc định), hoặc lực nhấn với bút có hỗ trợ.
+  Ba cỡ nhanh: 2 px chữ nhỏ, 3 px ghi bài, 4,5 px trình chiếu.
+- Mượt: nối các điểm bằng đường cong, giữ góc gấp và vị trí cuối nét.
+  Sát tay: giữ nguyên điểm nhận được. Không kéo trễ đầu bút bằng bộ lọc tọa độ.
+- Phân số ở đồ thị, khối tích phân, bảng biến thiên và miền nghiệm hiển thị tử–mẫu.
+  Ô nhập vẫn dùng /: ví dụ (x+1)/(x-2). Bản xem trước sẽ xếp thành phân số.
+- Hình phẳng: kiểu SGK, nét đen, nhãn nghiêng, dấu góc vuông/cạnh bằng nhau.
+  Đây là quy ước trình bày phổ biến; không đối chiếu một bộ SGK cụ thể.
+- Nét mới giữ kiểu nét khi lưu .moc, xuất SVG/PDF và LaTeX. Nét cũ giữ nguyên.
+- Xuất LaTeX: hình có công thức phức hợp dùng ảnh PNG để giữ đủ ký hiệu;
+  công thức độc lập vẫn là LaTeX chỉnh sửa được. Nét viết xuất dạng TikZ.
+
+CÁC TÍNH NĂNG TÀI LIỆU VÀ DẠY HỌC
+- Mở PDF: chọn file và khoảng trang, rồi viết/tô sáng/thêm chữ, hình lên tài liệu.
+  Tạo một sổ riêng, giữ nguyên các sổ trước đó. Tối đa 60 MB và 60 trang/lượt.
+  PDF chuyển thành nền ảnh cố định, không chọn/tẩy được chữ gốc; không phải OCR.
+- Lưu bản viết: .moc giữ tất cả nền PDF và đối tượng để sửa tiếp.
+  Mở bản viết để nhập .moc. Sổ cũng tự lưu trong trình duyệt đang dùng.
+- Tải PDF: gộp toàn bộ trang, nền và ghi chú thành PDF ảnh đúng tỷ lệ của từng trang, kể cả trang ngang và trang kéo dài.
+  In / PDF qua trình duyệt giữ nét và công thức vector; nền PDF vẫn là ảnh.
+- Khối tích phân 3D: trụ, nón, cầu, paraboloid, trụ rỗng, khối theo hàm tự nhập.
+  R là bán kính ngoài, r là bán kính trong, cần 0 <= r <= R trên [a,b].
+  Chọn Ox/Oy, góc nhìn, góc mở, số lát chia và vị trí mặt cắt. Hàm dùng sin, cos,
+  sqrt, abs, ln, exp, ^. Quay quanh Oy: nhập bán kính theo y (hoặc x đại diện).
+  V = pi * tích phân (R^2-r^2). Tính số bằng Simpson 800 khoảng;
+  tổng lát dùng trung điểm. Chỉ dùng hàm liên tục, hữu hạn trên khoảng đã chọn.
+  Góc mở để nhìn bên trong; thể tích hiển thị luôn là toàn khối quay đủ 360 độ.
+  Chèn hình vào trang; chọn hình rồi Sửa để quay/cắt/thay tham số tiếp.
+- Hình phẳng chuẩn: tam giác 3 cạnh/cạnh-góc-cạnh, chữ nhật, vuông, bình hành,
+  đa giác đều, tròn, elip, góc theo số đo. Hình giữ tỷ lệ hai trục đồng nhất.
+  Tam giác có trung tuyến, đường cao, phân giác, trung trực, nội/ngoại tiếp.
+  Độ dài dùng cùng đơn vị; góc theo độ. Đây là hình tham số, không phải hệ
+  hình học động kéo điểm có ràng buộc như GeoGebra.
+
+GIAO DIỆN STUDIO
+- Giao diện xanh mực, thanh bút ngang, trang viết rộng.
+- Viết tay / Toán & hình: chuyển giữa trang viết gọn và bộ công cụ Toán.
+- Tập trung viết: ẩn danh sách trang và các thanh phụ; Esc hoặc Hiện giao diện để quay lại.
+- Thư viện hình: mở/đóng bảng hình bên phải.
+- Kéo trang: bấm bàn tay hoặc phím G; giữ Space để kéo tạm thời.
+- Ctrl + cuộn chuột: thu/phóng tại vị trí con trỏ.
+- Vẽ tròn / Chữ nhật: kéo trực tiếp trên giấy; Shift + chữ nhật tạo hình vuông.
+- Ba cỡ nét nhanh; làm mượt Mượt / Sát tay; lưu lựa chọn bút trên trình duyệt.
+
+CÁCH MỞ TRÊN WINDOWS
+1. Giải nén TOÀN BỘ file ZIP vào một thư mục cố định.
+2. Mở index.html bằng Chrome hoặc Microsoft Edge. Không mở trực tiếp bên trong ZIP.
+3. Dùng Thêm trang để bắt đầu viết. Ứng dụng không cần mạng vì các thư viện đã đi kèm.
+4. Có thể tạo shortcut của index.html trên Desktop.
+
+CHUYỂN SỔ TỪ BẢN WEB
+- Trên bản đang dùng, chọn Sao lưu sổ để tải file .moc.
+- Trong bản mới, chọn Mở file sổ và chọn file đó.
+- Bản web và bản giải nén có vùng lưu riêng. Không có đồng bộ tự động.
+- Giữ file .moc dự phòng. Dữ liệu trình duyệt có thể mất khi xóa hồ sơ/cache.
+- Nếu trình duyệt không cho lưu từ file cục bộ, xuất .moc trước khi đóng.
+
+CÔNG CỤ
+- P: bút; V: chọn; E: tẩy nét; L: đường thẳng; H: dạ quang; T: văn bản.
+- Ctrl+Z: hoàn tác; Ctrl+Shift+Z: làm lại; Ctrl+S: sao lưu; Ctrl+D: nhân đôi.
+- Bật Chỉ bút để bỏ qua ngón tay. Lực nhấn phụ thuộc bút và trình duyệt.
+- Có thư viện hình phẳng/không gian mở rộng. Chọn hình để di chuyển, đổi cỡ, kéo đỉnh.
+- Cạnh: đổi tên đỉnh và chọn cạnh nét đứt.
+- Xoay 3D: các đa diện hỗ trợ, chỉnh góc nhìn rồi chèn bản vẽ 2D có cạnh khuất.
+- Công thức: MathLive, LaTeX, các mẫu hệ phương trình/giới hạn/tích phân.
+- Miền nghiệm: mỗi dòng một bất phương trình bậc nhất hai ẩn, ví dụ 2x+y<=6.
+  Miền tô màu là phần giao trong khung nhìn. Dấu <, > có biên đứt.
+- Đồ thị: sin, cos, tan (radian), sqrt, abs, ln, log, exp, ^, +, -, *, /.
+  Tiệm cận tự tính cho phân thức đa thức bậc thấp; đồ thị sử dụng lấy mẫu số.
+- Dựng hình: trung điểm, song song, vuông góc, hình chiếu, giao điểm, đường tròn.
+- Bảng biến thiên/xét dấu: nhập các mốc và dấu; chưa tự giải đạo hàm.
+- Khung bài tập: trắc nghiệm A–D, Đúng/Sai, trả lời ngắn, ghi chú.
+  Chọn khung rồi bấm Lời giải để ẩn/hiện khi giảng.
+
+XUẤT
+- PNG: ảnh trang hiện tại.
+- SVG: vector trang hiện tại.
+- In/PDF: xuất qua hộp thoại in; chọn Lưu dưới dạng PDF, tắt đầu/chân trang trình duyệt.
+  Nét viết, hình và công thức là vector; ảnh chèn giữ dạng bitmap.
+- LaTeX ZIP: main.tex và ảnh nếu có; chọn XeLaTeX. Xuất theo khối, không giữ tuyệt đối bố cục.
+- .moc: giữ đối tượng để mở và tiếp tục chỉnh sửa.
+
+CẬP NHẬT
+Sao lưu .moc trước, tải và giải nén bản mới, mở index.html rồi nhập sổ.
+Đây là ứng dụng web/PWA, không phải bộ cài .exe.
+Chưa có OCR chữ viết tay, nhập Word, đồng bộ đám mây hoặc hình học động có ràng buộc.
+Chưa kiểm thử bằng bút cảm ứng trên thiết bị thực tế của bạn.
+Mã nguồn JS/CSS đi kèm; có thể chỉnh sửa và nâng cấp về sau.
+
+THƯ VIỆN
+KaTeX 0.16.22 / MathLive 0.108.2 / MathJax 3.2.2 / PDF.js 4.10.38 / pdf-lib 1.17.1.
+Giấy phép gốc ở các thư mục vendor. Không sao chép mã nguồn Scribble Ink/NoteRender.
